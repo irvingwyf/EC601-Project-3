@@ -1,23 +1,6 @@
 # EC601-Project-3
-This is actually the forth version of codes I am using in order to use SincNet to train the model.
-
-In order to operate, instead of using pytorch, I cited "grausof"'s work of keras-sincnet(forked under my main directory too).
-
-And then I also made many changes to the codes in order to make it workable using the current versions of the librarys, but due
-
-to the lack of compatibility of some core functions, I have to limit the versions and reinstall the libraries, and I abandonned
-
-another two versions of the codes, and here is the final ones I am using.
-
-I used Python 2.7, keras 2.1.6, Tensorflow 1.10.0, tqdm and pysoundfile to produce the training process.
-
-Thanks to grausof, all the models are converted from original torch networks to using tensorflow backend keras functions,
-
-and the training process now can be operate on my macbook. 
-
-For reproduce the original result, I used the TIMIT dataset to process the training, but I didn't finished all data, I stoped at
-
-160 sets of sample, and it used more than 2 days to train, and the result is here:
+This is actually the forth version of codes I am using in order to use SincNet to train the model.In order to operate, instead of using pytorch, I cited "grausof"'s work of keras-sincnet(forked under my main directory too).And then I also made many changes to the codes in order to make it workable using the current versions of the librarys, but due to the lack of compatibility of some core functions, I have to limit the versions and reinstall the libraries, and I abandonned another two versions of the codes, and here is the final ones I am using. I used Python 2.7, keras 2.1.6, Tensorflow 1.10.0, tqdm and pysoundfile to produce the training process. Thanks to grausof, all the models are converted from original torch networks to using tensorflow backend keras functions,
+and the training process now can be operate on my macbook. For reproduce the original result, I used the TIMIT dataset to process the training, but I didn't finished all data, I stoped at 160 sets of sample, and it used more than 2 days to train, and the result is here:
 
 epoch 0, loss_tr=5.542032 err_tr=0.984189 loss_te=4.996982 err_te=0.969038 err_te_snt=0.919913\
 epoch 8, loss_tr=1.693487 err_tr=0.434424 loss_te=2.735717 err_te=0.612260 err_te_snt=0.069264\
@@ -41,9 +24,7 @@ epoch 144, loss_tr=0.062003 err_tr=0.019160 loss_te=3.412609 err_te=0.426363 err
 epoch 152, loss_tr=0.058740 err_tr=0.018281 loss_te=3.815553 err_te=0.443672 err_te_snt=0.010823\
 epoch 160, loss_tr=0.055162 err_tr=0.017314 loss_te=3.784261 err_te=0.446239 err_te_snt=0.008658\
 
-I am using the TIMIT dataset including 1500 data samples to train my own model in order to get a more accurate model for
-
-multi-speaker detection, and so far it has processed 107 samples and the terminal ouput is here:
+I am using the TIMIT dataset including 1500 data samples to train my own model in order to get a more accurate model for multi-speaker detection, and so far it has processed 107 samples and the terminal ouput is here:
 
 Using TensorFlow backend.\
 N_filt [80, 60, 60]\
@@ -577,10 +558,4 @@ Epoch 107/1500\
 
 Epoch 00107: saving model to data/checkpoints/SincNet.hdf5\
 
-Since the training is still processing, the model and the result output files are not ready to show here, but the reproduce and training exercises
-
-are being performed, and since in the term project, we will not using the SincNet to train the model for us to produce the detection result,
-
-I will not focus on this too much now, but later on once the training process is done, I will use the trained model to tryout to see if it is
-
-better than the model trained by using the original dataset refered by SincNet.
+Since the training is still processing, the model and the result output files are not ready to show here, but the reproduce and training exercises are being performed, and since in the term project, we will not using the SincNet to train the model for us to produce the detection result, I will not focus on this too much now, but later on once the training process is done, I will use the trained model to tryout to see if it is better than the model trained by using the original dataset refered by SincNet.
